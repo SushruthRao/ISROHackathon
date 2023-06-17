@@ -1,0 +1,142 @@
+body{
+    overflow-x: hidden;
+}
+
+@keyframes drift {
+    100% {
+        transform: translateX(3000px) ;
+        opacity: 0;
+    }
+}
+
+@keyframes bground-anim {
+    0% {
+        background-position: 0% 0%
+    }
+
+    50% {
+        background-position: 57% 100%
+    }
+
+    100% {
+        background-position: 0% 0%
+    }
+}
+#opacity{
+    opacity: 100%;
+}
+#px3{
+ 
+ padding-top: 3rem;
+}
+#bg {
+    animation: bground-anim 5s linear infinite;
+    background: linear-gradient(281deg, #57b9b6, #dce3e5);
+    background-size: 400% 400%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -9000;
+    
+    height: 200vh;
+    width: 200vw;
+
+    
+}
+#boxplot{
+    display: flex;
+    place-content: center;
+}
+#plot{
+   
+    width:600px;
+    
+}
+#emoji-bg > div {
+    position: absolute;
+    list-style: none;
+    top: 10px;
+    font-size: 4rem;
+    
+    animation: drift linear infinite;
+
+}
+
+#emoji-bg :nth-child(1) {
+    left: -15%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+#emoji-bg :nth-child(2) {
+    top:5%;
+    left: -15%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+#emoji-bg :nth-child(3) {
+    top:7%;
+    left: -15%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+#emoji-bg :nth-child(4) {
+    top : 10%;
+    left: -15%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+#emoji-bg :nth-child(5) {
+    left: -15%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+#emoji-bg :nth-child(6) {
+    left: -20%;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+
+
+input{
+    margin: 10px 10px 10px 10px;
+    border-top-style : hidden;
+    border-right-style : hidden;
+    border-left-style : hidden;
+    border-bottom-style: green solid;
+    border-bottom-style: blue 2px solid;
+    width: 6rem;
+}
+
+#input:focus, #input:active{
+    outline: none;
+}
+#submit-btn{
+        cursor: pointer;
+
+        font-size: 2rem;
+}
+#inpbox{
+    all:inherit;
+}
+#box{
+    padding-top: 5rem;
+}
+
+#plane-1-x-1, #plane-1-x-2, #plane-2-y-1, #plane-2-y-2 , #z-plane-1-x-1, #z-plane-1-x-2, #z-plane-2-y-1, #z-plane-2-y-2{
+    padding: 10px 10px 10px 10px;
+    border-bottom: 3px solid rgb(0, 72, 255);
+   background-color: transparent;
+   outline: none;
+}
+
+
+#plane-1:focus, #plane-2:focus{
+    padding: 10px 10px 10px 10px;
+    outline: none;
+   background-color: transparent;
+}
