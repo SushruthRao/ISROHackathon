@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>✈️ AVIATORS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.35.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body id="z" class="d-flex h-100 text-center ">
+
+    <div id="bg">
+        <div id="emoji-bg">
+            <div> ☁️ </div>
+            <div> ☁️ </div>
+            <div> ☁️ </div>
+            <div> ☁️ </div>
+            <div> ☁️ </div>
+
+
+        </div>
+    </div>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main class="px-3">
+            <div id="box">
+                <div>
+                    <div id="opacity" class="btn btn-primary btn-lg disabled ">Plane 1</div>
+                    <br>
+                    <br>
+
+                    <label for="1"> X1 </label>
+                    <input id="plane-1-x-1" name="1" type="number" />
+                    <label for="2"> Y1 </label>
+                    <input id="plane-2-y-1" name="2" type="number" />
+                    <br>
+
+
+                    <label for="1"> X2 </label>
+                    <input id="z-plane-1-x-1" name="1" type="number" />
+                    <label for="2"> Y2 </label>
+                    <input id="z-plane-2-y-1" name="2" type="number" />
+
+                </div>
+                <br> <br>
+                <div>
+                    <div id="opacity" class="btn btn-primary btn-lg disabled ">Plane 2</div>
+                    <br>
+                    <br>
+                    <label for="1"> X1 </label>
+                    <input id="plane-1-x-2" name="1" type="number" />
+                    <label for="2"> Y1</label>
+                    <input id="plane-2-y-2" name="2" type="number" />
+                    <br>
+
+                    <label for="1"> X2 </label>
+                    <input id="z-plane-1-x-2" name="1" type="number" />
+                    <label for="2"> Y2</label>
+                    <input id="z-plane-2-y-2" name="2" type="number" />
+                </div>
+
+            </div>
+
+            <br><br>
+            <div id="submit-btn" class="btn btn-primary btn-lg ">
+
+                ✈️ CALCULATE ✈️
+            </div>
+            <br>
+            <br>
+            <div id="result-btn" class="btn btn-primary btn-lg ">
+
+                result
+            </div>
+            <br><br>
+            <div id="boxplot">
+                <div id="plot"></div>
+            </div>
+
+
+        </main>
+        
+
+
+
+    </div>
+    
+    <script>
+        /*var w = 600;
+         var h = 300;
+ 
+         var dataset = [
+             
+         ];
+ 
+         //Create SVG element
+         var svg = d3.selectAll("#plot")
+             .append("svg")
+             .attr("width", w)
+             .attr("height", h);
+ 
+         svg.selectAll("circle")
+             .data(dataset)
+             .enter()
+             .append("circle")
+             .attr("cx", function (d) {
+                 return d[0];
+             })
+             .attr("cy", function (d) {
+                 return d[1];
+             })
+             .attr("r", function (d) {
+                 return Math.sqrt(h - d[1]);
+             })
+             .attr("fill", "#00aa88");
+ 
+         svg.selectAll("text")
+             .data(dataset)
+             .enter()
+             .append("text")
+             .text(function (d) {
+                 return d[0] + "," + d[1];
+             })
+             .attr("x", function (d) {
+                 return d[0];
+             })
+             .attr("y", function (d) {
+                 return d[1];
+             })
+             .attr("font-size", "15px")
+             .attr("fill", "white");
+             */
+             var px1 = document.getElementById("plane-1-x-1");
+            var px2 = document.getElementById("plane-1-x-2");
+            var py1 = document.getElementById("plane-2-y-1");
+            var py2 = document.getElementById("plane-2-y-2");
+                let pxval1 = px1.value; //a
+        let pxval2 = px2.value; // b
+        let pxval3 = py1.value;     
+        let pxval4 = py2.value;
+
+
+        
+    </script>
+
+</body>
+
+<script src="controller.js"></script>
+
+
+
+
+</html>
+
+
+<!--<br>  <br>
+                    <label for="1"> X2 </label>
+                    <input id="plane-1" name="1" type="text" />
+                    <label for="2"> Y2</label>
+                    <input id="plane-2" name="2" type="text" />-->
+
+
+
+<!-- <label for="1"> X1 </label> 
+                    <input class ="p1x" id="plane-1" name="1" type="text" />
+                    <label for="2"> Y1 </label>
+                    <input class ="p1y" id="plane-2" name="2" type="text" />
+                    <br>  <br>-->
